@@ -1,0 +1,9 @@
+{
+	"name": "aws-d-metadata",
+	"description": "Library to fetch meta data of an ec2 instance from within a vide.d application.",
+	"copyright": "Copyright © 2014, Stephan Dilly",
+	"authors": ["Stephan Dilly"],
+	"dependencies": {
+		"vibe-d": "==0.7.20"
+	}
+}
