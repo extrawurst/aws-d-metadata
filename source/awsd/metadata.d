@@ -27,3 +27,13 @@ public static AwsMetaData GetAwsData(string _request)
 
 	return result;
 }
+
+public static string GetInstanceId()
+{
+	auto res = GetAwsData("/latest/meta-data/instance-id");
+
+	if(res.values.length == 1)
+		return res.values[0];
+	else
+		return "";
+}
