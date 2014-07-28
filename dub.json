@@ -6,5 +6,6 @@
 	"authors": ["Stephan Dilly"],
 	"dependencies": {
 		"vibe-d": "==0.7.20"
-	}
+	},
+	"versions": ["VibeDefaultMain"],
 }
