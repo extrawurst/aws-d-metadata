@@ -2,7 +2,7 @@
 
 import vibe.d;
 
-struct AwsMetaData
+struct Ec2MetaData
 {
 	string request;
 	string[] values; 
@@ -10,9 +10,9 @@ struct AwsMetaData
 
 private static const EC2_BASEURL_METADATA = "http://169.254.169.254";
 
-public static AwsMetaData GetAwsData(string _request)
+public static Ec2MetaData Ec2GetMetaData(string _request)
 {
-	AwsMetaData result;
+	Ec2MetaData result;
 	result.request = _request;
 
 	requestHTTP(EC2_BASEURL_METADATA ~ _request,
@@ -28,9 +28,9 @@ public static AwsMetaData GetAwsData(string _request)
 	return result;
 }
 
-public static string GetInstanceId()
+public static string Ec2GetInstanceId()
 {
-	auto res = GetAwsData("/latest/meta-data/instance-id");
+	auto res = Ec2GetMetaData("/latest/meta-data/instance-id");
 
 	if(res.values.length == 1)
 		return res.values[0];

@@ -4,6 +4,6 @@ import awsd.metadata;
 
 shared static this()
 {
-	writefln("%s", GetAwsData("/latest/meta-data/"));
-	writefln("instance-id: %s", GetInstanceId());
+	writefln("%s", Ec2GetMetaData("/latest/meta-data/"));
+	writefln("instance-id: %s", Ec2GetInstanceId());
 }
